@@ -1,0 +1,21 @@
+{
+    "explorer.fileNesting.patterns": {
+        "*.component.ts": "${capture}.component.html, ${capture}.component.css, ${capture}.component.scss, ${capture}.component.spec.ts"
+    },
+    "explorer.compactFolders": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
