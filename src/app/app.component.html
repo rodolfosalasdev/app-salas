@@ -1,1 +1,7 @@
-<router-outlet />
+<div *ngIf="activeRouter() !== '/' && activeRouter() !== '/menu'">
+    <app-header></app-header>
+</div>
+
+<div class="flex justify-center">
+    <router-outlet />
+</div>
