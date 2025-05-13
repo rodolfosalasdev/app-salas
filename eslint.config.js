@@ -1,10 +1,14 @@
+import prettierPlugin from 'eslint-plugin-prettier';
+
 export default [
   {
     ignores: ['node_modules'],
   },
   {
     files: ['**/*.ts', '**/*.js'],
-    plugins: ['prettier'],
+    plugins: {
+      prettier: prettierPlugin,
+    },
     rules: {
       'prettier/prettier': 'error',
       quotes: ['error', 'single'],
