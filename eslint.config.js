@@ -4,6 +4,7 @@ export default [
   },
   {
     files: ['**/*.ts', '**/*.js'],
+    plugins: ['prettier'],
     rules: {
       'prettier/prettier': 'error',
       quotes: ['error', 'single'],
