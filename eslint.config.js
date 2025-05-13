@@ -1,18 +1,23 @@
 import prettierPlugin from 'eslint-plugin-prettier';
+import tsParser from '@typescript-eslint/parser';
+import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default [
   {
-    ignores: ['node_modules'],
+    ignores: ['node_modules']
   },
   {
     files: ['**/*.ts', '**/*.js'],
     plugins: {
-      prettier: prettierPlugin,
+      prettier: prettierPlugin
+    },
+    languageOptions: {
+      parser: tsParser,
+      sourceType: 'module'
     },
     rules: {
-      'prettier/prettier': 'error',
-      quotes: ['error', 'single'],
-      semi: ['error', 'never'],
+      'prettier/prettier': ['error']
     },
-  },
+    settings: eslintConfigPrettier // Desativa regras de formatação do ESLint
+  }
 ];
