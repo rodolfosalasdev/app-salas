@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint:fix": "eslint . --ext .ts,.js",
+    "lint:fix": "eslint . --ext .ts,.js --fix",
     "lint": "eslint . --ext .ts,.js",
     "format": "prettier --write .",
     "serve:ssr:app-salas": "node dist/app-salas/server/server.mjs"
