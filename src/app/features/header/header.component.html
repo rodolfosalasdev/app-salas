@@ -1,32 +1,32 @@
 <div class="header flex items-center p-3 bg-gray-100 border-b-2">
-  <div class="sheet flex justify-start w-1/2 h-full ml-10">{{ siteName }}</div>
+  <div class="sheet flex justify-start w-1/2 h-full ml-10">
+    <div class="font-bold">{{ 'header.title' | translate }}</div>
+  </div>
   <div class="sheet flex justify-end w-1/2 h-full mr-10">
-    <hlm-sheet side="right">
-      <button id="edit-profile" brnSheetTrigger>
-        <hlm-avatar variant="medium" brnSheetTrigger>
-          <img src="/assets/avatar.png" alt="spartan logo. Resembling a spartanic shield" hlmAvatarImage />
-          <span class="bg-[#878787] text-white" hlmAvatarFallback>RS</span>
-        </hlm-avatar>
-      </button>
-      <hlm-sheet-content *brnSheetContent="let ctx">
-        <hlm-sheet-header>
-          <h3 hlmSheetTitle>Edit Profile</h3>
-          <p hlmSheetDescription>Make changes to your profile here. Click save when you're done.</p>
-        </hlm-sheet-header>
-        <div class="py-4 grid gap-4">
-          <div class="items-center grid grid-cols-4 gap-4">
-            <label hlmLabel for="name" class="text-right">Name</label>
-            <input hlmInput id="name" value="Pedro Duarte" class="col-span-3" />
-          </div>
-          <div class="items-center grid grid-cols-4 gap-4">
-            <label hlmLabel for="username" class="text-right">Username</label>
-            <input hlmInput id="username" value="@peduarte" class="col-span-3" />
-          </div>
-        </div>
-        <hlm-sheet-footer>
-          <button hlmBtn type="submit">Save Changes</button>
-        </hlm-sheet-footer>
-      </hlm-sheet-content>
-    </hlm-sheet>
+    <form [formGroup]="form" class="mr-4">
+      <brn-select
+        class="inline-block"
+        formControlName="Language"
+        (valueChange)="onLanguageChange($event)"
+        placeholder="{{ 'header.select-language' | translate }}"
+      >
+        <hlm-select-trigger class="w-56">
+          <hlm-select-value
+            >">
+            <div class="flex items-center gap-x-2" *brnSelectValue="let value">
+              {{ value.label }}
+            </div>
+          </hlm-select-value>
+        </hlm-select-trigger>
+        <hlm-select-content>
+          @for (option of options; track option) {
+            <hlm-option [value]="option">
+              {{ option.label }}
+            </hlm-option>
+          }
+        </hlm-select-content>
+      </brn-select>
+    </form>
+    <app-profile-sheet></app-profile-sheet>
   </div>
 </div>

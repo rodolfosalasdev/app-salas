@@ -1,44 +1,44 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 
-import { provideIcons } from '@ng-icons/core';
-import { lucideCross } from '@ng-icons/lucide';
-import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
-import { HlmInputDirective } from '@spartan-ng/ui-input-helm';
-import { HlmLabelDirective } from '@spartan-ng/ui-label-helm';
-import { BrnSheetContentDirective, BrnSheetTriggerDirective } from '@spartan-ng/brain/sheet';
-import {
-  HlmSheetComponent,
-  HlmSheetContentComponent,
-  HlmSheetDescriptionDirective,
-  HlmSheetFooterComponent,
-  HlmSheetHeaderComponent,
-  HlmSheetTitleDirective
-} from '@spartan-ng/ui-sheet-helm';
-import { HlmAvatarImageDirective, HlmAvatarComponent, HlmAvatarFallbackDirective } from '@spartan-ng/ui-avatar-helm';
+import { ProfileSheetComponent } from './profile-sheet/profile-sheet.component';
+import { TranslationService } from '../../core/service/translation.service';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { BrnSelectImports } from '@spartan-ng/brain/select';
+import { HlmSelectImports } from '@spartan-ng/ui-select-helm';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    BrnSheetTriggerDirective,
-    BrnSheetContentDirective,
-    HlmSheetComponent,
-    HlmSheetContentComponent,
-    HlmSheetHeaderComponent,
-    HlmSheetFooterComponent,
-    HlmSheetTitleDirective,
-    HlmSheetDescriptionDirective,
-    HlmButtonDirective,
-    HlmInputDirective,
-    HlmLabelDirective,
-    HlmAvatarImageDirective,
-    HlmAvatarComponent,
-    HlmAvatarFallbackDirective
+    FormsModule,
+    ReactiveFormsModule,
+    ProfileSheetComponent,
+    TranslateModule,
+    BrnSelectImports,
+    HlmSelectImports
   ],
-  providers: [provideIcons({ lucideCross })],
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
   public siteName = 'RODOLFOSALAS.DEV';
+  private readonly formBuilder = inject(FormBuilder);
+  private readonly translationService = inject(TranslationService);
+
+  public readonly options = [
+    { label: '🇪🇸 Español', value: 'es' },
+    { label: '🇧🇷 Português', value: 'pt' },
+    { label: '🇺🇸 English', value: 'en' }
+  ];
+
+  protected form = this.formBuilder.group({
+    Language: this.options[0]
+  });
+
+  onLanguageChange(selectedOption: any) {
+    const lang = selectedOption?.value || '';
+    this.translationService.changeLanguage(lang);
+  }
 }

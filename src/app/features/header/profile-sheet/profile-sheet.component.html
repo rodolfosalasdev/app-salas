@@ -1,0 +1,27 @@
+<hlm-sheet side="right">
+  <button id="edit-profile" brnSheetTrigger>
+    <hlm-avatar variant="medium" brnSheetTrigger>
+      <img src="/assets/avatar.png" alt="spartan logo. Resembling a spartanic shield" hlmAvatarImage />
+      <span class="bg-[#878787] text-white" hlmAvatarFallback>RS</span>
+    </hlm-avatar>
+  </button>
+  <hlm-sheet-content *brnSheetContent="let ctx">
+    <hlm-sheet-header>
+      <h3 hlmSheetTitle>{{ 'header.sheet.title' | translate }}</h3>
+      <p hlmSheetDescription>{{ 'header.sheet.subtitle' | translate }}</p>
+    </hlm-sheet-header>
+    <div class="py-4 grid gap-4">
+      <div class="items-center grid grid-cols-4 gap-4">
+        <label hlmLabel for="name" class="text-right">Name</label>
+        <input hlmInput id="name" value="Pedro Duarte" class="col-span-3" />
+      </div>
+      <div class="items-center grid grid-cols-4 gap-4">
+        <label hlmLabel for="username" class="text-right">Username</label>
+        <input hlmInput id="username" value="@peduarte" class="col-span-3" />
+      </div>
+    </div>
+    <hlm-sheet-footer>
+      <button hlmBtn type="submit">Save Changes</button>
+    </hlm-sheet-footer>
+  </hlm-sheet-content>
+</hlm-sheet>

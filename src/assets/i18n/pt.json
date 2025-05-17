@@ -1,0 +1,11 @@
+{
+  "header": {
+    "title": "RODOLFOSALAS.DEV",
+    "subtitle": "Subtítulo do Cabeçalho teste",
+    "select-language": "Altere o idioma",
+    "sheet": {
+      "title": "Rodolfo Salas",
+      "subtitle": "Bem vindo! Sou Rodolfo Salas, desenvolvedor full stack javascript!"
+    }
+  }
+}
