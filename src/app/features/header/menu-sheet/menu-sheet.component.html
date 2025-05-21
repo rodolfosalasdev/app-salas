@@ -1,0 +1,33 @@
+<hlm-sheet side="left">
+  <button id="edit-profile" brnSheetTrigger>
+    <ng-icon hlm size="lg" name="lucideMenu" />
+  </button>
+  <hlm-sheet-content *brnSheetContent="let ctx" class="w-64">
+    <hlm-sheet-header>
+      <h3 hlmSheetTitle>{{ 'header.menu-sheet.title' | translate }}</h3>
+    </hlm-sheet-header>
+    <div class="py-4 grid">
+      <button hlmBtn type="submit" variant="ghost" class="flex justify-start">
+        <ng-icon hlm size="sm" class="mr-2" name="lucideMail" />
+        <div class="ml-4">
+          {{ 'header.menu-sheet.item-1' | translate }}
+        </div>
+      </button>
+
+      <button hlmBtn type="submit" variant="ghost" class="flex justify-start">
+        <ng-icon hlm size="sm" class="mr-2" name="lucideMail" />
+        <div class="ml-4">
+          {{ 'header.menu-sheet.item-2' | translate }}
+        </div>
+      </button>
+
+      <button hlmBtn type="submit" variant="ghost" class="flex justify-start">
+        <ng-icon hlm size="sm" class="mr-2" name="lucideMail" />
+        <div class="ml-4">
+          {{ 'header.menu-sheet.item-3' | translate }}
+        </div>
+      </button>
+    </div>
+    <hlm-sheet-footer> </hlm-sheet-footer>
+  </hlm-sheet-content>
+</hlm-sheet>

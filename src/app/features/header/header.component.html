@@ -1,8 +1,13 @@
 <div class="header flex items-center p-3 bg-gray-100 border-b-2">
   <div class="sheet flex justify-start w-1/2 h-full ml-10">
-    <div class="font-bold">{{ 'header.title' | translate }}</div>
+    <div class="flex items-center mt-2">
+      <app-menu-sheet></app-menu-sheet>
+    </div>
+    <div class="flex items-center font-bold ml-6">
+      {{ 'header.title' | translate }}
+    </div>
   </div>
-  <div class="sheet flex justify-end w-1/2 h-full mr-10">
+  <div class="sheet flex justify-end w-1/2 h-full mr-6">
     <form [formGroup]="form" class="mr-4">
       <brn-select
         class="inline-block"

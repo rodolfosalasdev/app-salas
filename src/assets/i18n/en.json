@@ -3,9 +3,15 @@
     "title": "RODOLFOSALAS.DEV",
     "subtitle": "Header subtitle test",
     "select-language": "Change language",
-    "sheet": {
+    "profile-sheet": {
       "title": "Rodolfo Salas",
       "subtitle": "Welcome! I am Rodolfo Salas, full stack javascript developer!"
+    },
+    "menu-sheet": {
+      "title": "Menu",
+      "item-1": "Item 1",
+      "item-2": "Item 2",
+      "item-3": "Item 3"
     }
   }
 }

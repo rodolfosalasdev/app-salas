@@ -3,9 +3,15 @@
     "title": "RODOLFOSALAS.DEV",
     "subtitle": "Subtítulo de cabecera de prueba",
     "select-language": "Cambiar idioma",
-    "sheet": {
+    "profile-sheet": {
       "title": "Rodolfo Salas",
       "subtitle": "¡Bienvenido! Soy Rodolfo Salas, desarrollador full stack de javascript!"
+    },
+    "menu-sheet": {
+      "title": "Menu",
+      "item-1": "Item 1",
+      "item-2": "Item 2",
+      "item-3": "Item 3"
     }
   }
 }

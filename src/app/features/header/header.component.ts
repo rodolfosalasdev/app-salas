@@ -6,7 +6,8 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { BrnSelectImports } from '@spartan-ng/brain/select';
 import { HlmSelectImports } from '@spartan-ng/ui-select-helm';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MenuSheetComponent } from './menu-sheet/menu-sheet.component';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
     FormsModule,
     ReactiveFormsModule,
     ProfileSheetComponent,
+    MenuSheetComponent,
     TranslateModule,
     BrnSelectImports,
     HlmSelectImports
