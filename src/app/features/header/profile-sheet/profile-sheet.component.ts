@@ -20,7 +20,6 @@ import {
 
 @Component({
   selector: 'app-profile-sheet',
-  standalone: true,
   imports: [
     TranslateModule,
     BrnSheetTriggerDirective,

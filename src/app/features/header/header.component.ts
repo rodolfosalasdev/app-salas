@@ -11,7 +11,6 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
   imports: [
     FormsModule,
     ReactiveFormsModule,

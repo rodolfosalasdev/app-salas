@@ -38,22 +38,21 @@ export const sheetVariants = cva(
 );
 
 @Component({
-  selector: 'hlm-sheet-content',
-  standalone: true,
-  imports: [HlmSheetCloseDirective, BrnSheetCloseDirective, NgIcon, HlmIconDirective],
-  providers: [provideIcons({ lucideX })],
-  host: {
-    '[class]': '_computedClass()',
-    '[attr.data-state]': 'state()'
-  },
-  template: `
+    selector: 'hlm-sheet-content',
+    imports: [HlmSheetCloseDirective, BrnSheetCloseDirective, NgIcon, HlmIconDirective],
+    providers: [provideIcons({ lucideX })],
+    host: {
+        '[class]': '_computedClass()',
+        '[attr.data-state]': 'state()'
+    },
+    template: `
     <ng-content />
     <button brnSheetClose hlm>
       <span class="sr-only">Close</span>
       <ng-icon hlm size="sm" name="lucideX" />
     </button>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HlmSheetContentComponent {
   private readonly _stateProvider = injectExposesStateProvider({ host: true });

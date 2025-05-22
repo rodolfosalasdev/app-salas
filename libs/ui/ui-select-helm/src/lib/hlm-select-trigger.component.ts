@@ -30,11 +30,10 @@ export const selectTriggerVariants = cva(
 type SelectTriggerVariants = VariantProps<typeof selectTriggerVariants>;
 
 @Component({
-  selector: 'hlm-select-trigger',
-  standalone: true,
-  imports: [BrnSelectTriggerDirective, NgIcon, HlmIconDirective],
-  providers: [provideIcons({ lucideChevronDown })],
-  template: `
+    selector: 'hlm-select-trigger',
+    imports: [BrnSelectTriggerDirective, NgIcon, HlmIconDirective],
+    providers: [provideIcons({ lucideChevronDown })],
+    template: `
     <button [class]="_computedClass()" #button hlmInput brnSelectTrigger type="button">
       <ng-content />
       @if (icon()) {
@@ -44,7 +43,7 @@ type SelectTriggerVariants = VariantProps<typeof selectTriggerVariants>;
       }
     </button>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HlmSelectTriggerComponent {
   protected readonly icon = contentChild(HlmIconDirective);

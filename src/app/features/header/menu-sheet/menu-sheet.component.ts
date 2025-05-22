@@ -11,7 +11,6 @@ import { HlmSheetComponent, HlmSheetContentComponent, HlmSheetFooterComponent } 
 
 @Component({
   selector: 'app-menu-sheet',
-  standalone: true,
   imports: [
     CommonModule,
     TranslateModule,
