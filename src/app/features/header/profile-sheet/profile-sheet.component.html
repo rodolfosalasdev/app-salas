@@ -7,21 +7,28 @@
   </button>
   <hlm-sheet-content *brnSheetContent="let ctx">
     <hlm-sheet-header>
-      <h3 hlmSheetTitle>{{ 'header.profile-sheet.title' | translate }}</h3>
+      <brn-popover>
+        <button brnPopoverTrigger class="w-10">
+          <h3 hlmSheetTitle>{{ 'header.profile-sheet.title' | translate }}</h3>
+        </button>
+        <div hlmPopoverContent *brnPopoverContent="let ctx" class="flex flex-col items-start w-36 gap-2">
+          <span class="flex items-center">
+            <ng-icon hlm size="sm" class="mr-2" name="lucideLinkedin" />
+            <button (click)="redirectTo(socialMedia.linkedIn)" id="edit-profile" variant="ghost">LinkedIn</button>
+          </span>
+
+          <brn-separator hlmSeparator />
+
+          <span class="flex items-center">
+            <ng-icon hlm size="sm" class="mr-2" name="lucideInstagram" />
+            <button (click)="redirectTo(socialMedia.instagram)" id="edit-profile" variant="ghost">Instagram</button>
+          </span>
+        </div>
+      </brn-popover>
       <p hlmSheetDescription>{{ 'header.profile-sheet.subtitle' | translate }}</p>
     </hlm-sheet-header>
-    <div class="py-4 grid gap-4">
-      <div class="items-center grid grid-cols-4 gap-4">
-        <label hlmLabel for="name" class="text-right">Name</label>
-        <input hlmInput id="name" value="Pedro Duarte" class="col-span-3" />
-      </div>
-      <div class="items-center grid grid-cols-4 gap-4">
-        <label hlmLabel for="username" class="text-right">Username</label>
-        <input hlmInput id="username" value="@peduarte" class="col-span-3" />
-      </div>
-    </div>
     <hlm-sheet-footer>
-      <button hlmBtn type="submit">Save Changes</button>
+      <!-- <button hlmBtn type="submit">Save Changes</button> -->
     </hlm-sheet-footer>
   </hlm-sheet-content>
 </hlm-sheet>

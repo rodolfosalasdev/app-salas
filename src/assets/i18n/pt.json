@@ -4,12 +4,11 @@
     "subtitle": "Subtítulo do Cabeçalho teste",
     "select-language": "Altere o idioma",
     "profile-sheet": {
-      "title": "Rodolfo Salas",
+      "title": "@rodolfosalasdev",
       "subtitle": "Bem vindo! Sou Rodolfo Salas, desenvolvedor full stack javascript!"
     },
     "menu-sheet": {
-      "title": "Menu",
-      "item-1": "Item 1",
+      "item-1": "Usuários",
       "item-2": "Item 2",
       "item-3": "Item 3"
     }
