@@ -1,11 +1,17 @@
 {
   "header": {
     "title": "RODOLFOSALAS.DEV",
-    "subtitle": "Subtítulo de cabecera de prueba",
     "select-language": "Cambiar idioma",
     "profile-sheet": {
       "title": "@rodolfosalasdev",
-      "subtitle": "¡Bienvenido! Soy Rodolfo Salas, desarrollador full stack de javascript."
+      "subtitle": "Sobre mí",
+      "about-me": {
+        "paragraph-1": "¡Bienvenido! Soy Rodolfo Salas, desarrollador full-stack de JavaScript.",
+        "paragraph-2": "Tengo 5 años de experiencia en desarrollo front-end, trabajando con Angular, JavaScript, TypeScript, ReactJS y NextJS. También tengo habilidades en Tailwind CSS, SpartanNG, Shadcn, HTML y CSS, creando interfaces modernas, rápidas e intuitivas.",
+        "paragraph-3": "Además del front-end, tengo experiencia con NestJS, AWS, control de versiones en Git (GitLab/GitHub) y colaboración en Kubernetes, APIGEE, ServiceNow, CloudBees, Jira, Confluence, OpenShift, Grafana y Shield.",
+        "paragraph-4": "Actualmente, soy Tech Lead Front-End en Banco PAN, y ya he trabajado en grandes empresas como Accenture y Santander. Me gustan los desafíos que impulsan el crecimiento profesional y aportan soluciones innovadoras al desarrollo web.",
+        "paragraph-5": "🇪🇸 Estoy en proceso de obtener la ciudadanía española, lo que me permitirá mayor flexibilidad para oportunidades laborales en España y Europa."
+      }
     },
     "menu-sheet": {
       "item-1": "Usuarios",
