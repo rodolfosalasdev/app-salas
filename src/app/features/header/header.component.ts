@@ -7,6 +7,7 @@ import { HlmSelectImports } from '@spartan-ng/ui-select-helm';
 import { TranslationService } from '../../core/service/translation.service';
 import { MenuSheetComponent } from './menu-sheet/menu-sheet.component';
 import { ProfileSheetComponent } from './profile-sheet/profile-sheet.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +19,8 @@ import { ProfileSheetComponent } from './profile-sheet/profile-sheet.component';
     MenuSheetComponent,
     TranslateModule,
     BrnSelectImports,
-    HlmSelectImports
+    HlmSelectImports,
+    RouterLink
   ],
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush

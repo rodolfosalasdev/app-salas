@@ -4,7 +4,9 @@
       <app-menu-sheet></app-menu-sheet>
     </div>
     <div class="flex items-center font-bold ml-6">
-      {{ 'header.title' | translate }}
+      <a [routerLink]="'/'" class="hover:cursor-pointer">
+        {{ 'header.title' | translate }}
+      </a>
     </div>
   </div>
   <div class="sheet flex justify-end w-1/2 h-full mr-6">

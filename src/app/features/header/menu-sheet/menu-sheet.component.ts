@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, viewChild } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideChartBar, lucideMail, lucideMenu } from '@ng-icons/lucide';
 import { TranslateModule } from '@ngx-translate/core';
@@ -28,9 +29,15 @@ import { HlmSheetComponent, HlmSheetContentComponent, HlmSheetFooterComponent } 
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuSheetComponent {
-  public viewchildSheetRef = viewChild(BrnSheetComponent);
+  private readonly router = inject(Router);
+  private readonly viewchildSheetRef = viewChild(BrnSheetComponent);
 
   closeSheet() {
     this.viewchildSheetRef()?.close({});
+  }
+
+  goTo(path: string) {
+    this.router.navigate([path]);
+    this.closeSheet();
   }
 }
