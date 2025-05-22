@@ -1,14 +1,12 @@
-import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
-
-import { provideIcons, NgIcon } from '@ng-icons/core';
-import { lucideChartBar, lucideMail } from '@ng-icons/lucide';
-import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
-import { BrnSheetComponent, BrnSheetContentDirective, BrnSheetTriggerDirective } from '@spartan-ng/brain/sheet';
-import { HlmSheetComponent, HlmSheetContentComponent, HlmSheetFooterComponent } from '@spartan-ng/ui-sheet-helm';
-import { TranslateModule } from '@ngx-translate/core';
-import { HlmIconDirective } from '@spartan-ng/ui-icon-helm';
-import { lucideMenu } from '@ng-icons/lucide';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { lucideChartBar, lucideMail, lucideMenu } from '@ng-icons/lucide';
+import { TranslateModule } from '@ngx-translate/core';
+import { BrnSheetComponent, BrnSheetContentDirective, BrnSheetTriggerDirective } from '@spartan-ng/brain/sheet';
+import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
+import { HlmIconDirective } from '@spartan-ng/ui-icon-helm';
+import { HlmSheetComponent, HlmSheetContentComponent, HlmSheetFooterComponent } from '@spartan-ng/ui-sheet-helm';
 
 @Component({
   selector: 'app-menu-sheet',

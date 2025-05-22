@@ -1,13 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-
-import { ProfileSheetComponent } from './profile-sheet/profile-sheet.component';
-import { TranslationService } from '../../core/service/translation.service';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-
 import { BrnSelectImports } from '@spartan-ng/brain/select';
 import { HlmSelectImports } from '@spartan-ng/ui-select-helm';
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { TranslationService } from '../../core/service/translation.service';
 import { MenuSheetComponent } from './menu-sheet/menu-sheet.component';
+import { ProfileSheetComponent } from './profile-sheet/profile-sheet.component';
 
 @Component({
   selector: 'app-header',

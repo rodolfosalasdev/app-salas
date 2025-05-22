@@ -1,11 +1,14 @@
-import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
-
-import { provideIcons, NgIcon } from '@ng-icons/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideCross, lucideInstagram, lucideLinkedin } from '@ng-icons/lucide';
-import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
-import { HlmInputDirective } from '@spartan-ng/ui-input-helm';
-import { HlmLabelDirective } from '@spartan-ng/ui-label-helm';
+import { TranslateModule } from '@ngx-translate/core';
+import { BrnPopoverComponent, BrnPopoverContentDirective, BrnPopoverTriggerDirective } from '@spartan-ng/brain/popover';
+import { BrnSeparatorComponent } from '@spartan-ng/brain/separator';
 import { BrnSheetContentDirective, BrnSheetTriggerDirective } from '@spartan-ng/brain/sheet';
+import { HlmAvatarComponent, HlmAvatarFallbackDirective, HlmAvatarImageDirective } from '@spartan-ng/ui-avatar-helm';
+import { HlmIconDirective } from '@spartan-ng/ui-icon-helm';
+import { HlmPopoverContentDirective } from '@spartan-ng/ui-popover-helm';
+import { HlmSeparatorDirective } from '@spartan-ng/ui-separator-helm';
 import {
   HlmSheetComponent,
   HlmSheetContentComponent,
@@ -14,21 +17,6 @@ import {
   HlmSheetHeaderComponent,
   HlmSheetTitleDirective
 } from '@spartan-ng/ui-sheet-helm';
-import { HlmAvatarImageDirective, HlmAvatarComponent, HlmAvatarFallbackDirective } from '@spartan-ng/ui-avatar-helm';
-import { TranslateModule } from '@ngx-translate/core';
-
-import {
-  BrnPopoverCloseDirective,
-  BrnPopoverComponent,
-  BrnPopoverContentDirective,
-  BrnPopoverTriggerDirective
-} from '@spartan-ng/brain/popover';
-import { HlmPopoverCloseDirective, HlmPopoverContentDirective } from '@spartan-ng/ui-popover-helm';
-
-import { HlmSeparatorDirective } from '@spartan-ng/ui-separator-helm';
-import { BrnSeparatorComponent } from '@spartan-ng/brain/separator';
-
-import { HlmIconDirective } from '@spartan-ng/ui-icon-helm';
 
 @Component({
   selector: 'app-profile-sheet',
@@ -43,17 +31,12 @@ import { HlmIconDirective } from '@spartan-ng/ui-icon-helm';
     HlmSheetFooterComponent,
     HlmSheetTitleDirective,
     HlmSheetDescriptionDirective,
-    HlmButtonDirective,
-    HlmInputDirective,
-    HlmLabelDirective,
     HlmAvatarImageDirective,
     HlmAvatarComponent,
     HlmAvatarFallbackDirective,
-    BrnPopoverCloseDirective,
     BrnPopoverComponent,
     BrnPopoverContentDirective,
     BrnPopoverTriggerDirective,
-    HlmPopoverCloseDirective,
     HlmPopoverContentDirective,
     HlmSeparatorDirective,
     BrnSeparatorComponent,
