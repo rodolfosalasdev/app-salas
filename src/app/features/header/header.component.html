@@ -1,16 +1,16 @@
-<div class="header flex items-center p-3 bg-gray-100 border-b-2">
-  <div class="sheet flex justify-start w-1/2 h-full ml-4">
-    <div class="flex items-center mt-2">
+<div class="header flex h-16 w-full bg-gray-100 border-b-2">
+  <div class="sheet flex-1 min-w-[120px] max-w-1/2 flex justify-start items-center pl-4">
+    <div class="pt-2">
       <app-menu-sheet></app-menu-sheet>
     </div>
-    <div class="flex items-center font-bold ml-6">
+    <div class="hidden sm:flex font-bold pl-6">
       <a [routerLink]="'/'" class="hover:cursor-pointer">
         {{ 'header.title' | translate }}
       </a>
     </div>
   </div>
-  <div class="sheet flex justify-end w-1/2 h-full mr-6">
-    <form [formGroup]="form" class="mr-4">
+  <div class="sheet flex-1 min-w-[240px] max-w-1/2 flex justify-end items-center pr-4">
+    <form [formGroup]="form" class="flex w-full max-w-60 mr-4">
       <brn-select
         class="inline-block"
         formControlName="Language"
@@ -34,6 +34,8 @@
         </hlm-select-content>
       </brn-select>
     </form>
-    <app-profile-sheet></app-profile-sheet>
+    <span class="">
+      <app-profile-sheet></app-profile-sheet>
+    </span>
   </div>
 </div>

@@ -5,12 +5,14 @@
       <span class="bg-[#878787] text-white" hlmAvatarFallback>RS</span>
     </hlm-avatar>
   </button>
-  <hlm-sheet-content *brnSheetContent="let ctx">
-    <hlm-sheet-header>
+  <hlm-sheet-content *brnSheetContent="let ctx" class="w-96">
+    <hlm-sheet-header class="overflow-auto max-h-screen">
       <brn-popover>
-        <button brnPopoverTrigger class="w-10">
-          <h3 hlmSheetTitle>{{ 'header.profile-sheet.title' | translate }}</h3>
-        </button>
+        <div class="w-10 pl-5">
+          <button brnPopoverTrigger>
+            <h3 hlmSheetTitle>{{ 'header.profile-sheet.title' | translate }}</h3>
+          </button>
+        </div>
         <div hlmPopoverContent *brnPopoverContent="let ctx" class="flex flex-col items-start w-36 gap-2">
           <span class="flex items-center">
             <ng-icon hlm size="sm" class="mr-2" name="lucideLinkedin" />
