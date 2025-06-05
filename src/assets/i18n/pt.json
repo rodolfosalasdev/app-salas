@@ -18,5 +18,11 @@
       "item-2": "Usuários",
       "item-3": "Item 3"
     }
+  },
+  "list-of-up-to-ten": {
+    "label": "Lista de até dez itens",
+    "clear-btn": "limpar",
+    "add-btn": "adicionar",
+    "placeholder": "iten"
   }
 }
