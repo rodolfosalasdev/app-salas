@@ -1,0 +1,30 @@
+<div class="flex justify-center items-center">
+  <section hlmCard class="flex justify-center items-center flex-col flex-1 max-w-sm min-w-[30vh] min-h-[22vh] pb-2">
+    <form (submit)="submitForm()" class="mt-4">
+      <label hlmLabel
+        >{{ 'list-of-up-to-ten.label' | translate }}
+        <input
+          hlmInput
+          placeholder="{{ 'list-of-up-to-ten.placeholder' | translate }}"
+          type="email"
+          [value]="name()"
+          (input)="updateName($event)"
+          maxlength="15"
+        />
+      </label>
+      <span class="flex justify-end mt-4">
+        <button type="button" (click)="clear()" hlmBtn variant="link">
+          {{ 'list-of-up-to-ten.clear-btn' | translate }}
+        </button>
+        <button type="submit" hlmBtn>{{ 'list-of-up-to-ten.add-btn' | translate }}</button>
+      </span>
+    </form>
+    @if (names().length > 0) {
+      <div class="flex justify-center flex-wrap mt-4 gap-1">
+        @for (item of names(); track $index) {
+          <section hlmCard class="text-md text-gray-500 p-2">{{ item | titlecase }}</section>
+        }
+      </div>
+    }
+  </section>
+</div>

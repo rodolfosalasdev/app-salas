@@ -18,5 +18,11 @@
       "item-2": "Usuarios",
       "item-3": "Elemento 3"
     }
+  },
+  "list-of-up-to-ten": {
+    "label": "Lista de hasta diez elementos",
+    "clear-btn": "limpiar",
+    "add-btn": "añadir",
+    "placeholder": "Elemento"
   }
 }

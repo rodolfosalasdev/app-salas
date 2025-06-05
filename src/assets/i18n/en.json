@@ -18,5 +18,11 @@
       "item-2": "Users",
       "item-3": "Item 3"
     }
+  },
+  "list-of-up-to-ten": {
+    "label": "List of up to ten items",
+    "clear-btn": "clear",
+    "add-btn": "add",
+    "placeholder": "Item"
   }
 }
