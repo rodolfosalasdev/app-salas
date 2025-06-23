@@ -1,5 +1,5 @@
-<div class="flex justify-center items-center">
-  <section hlmCard class="flex items-center flex-col flex-1 max-w-sm min-w-[30vh] min-h-[22vh] pb-2">
+<div class="flex flex-wrap">
+  <span hlmCard class="flex items-center flex-col flex-1 min-w-[40vh] min-h-[22vh] pb-2">
     <form (submit)="submitForm()" class="mt-4">
       <label hlmLabel
         >{{ 'list-of-up-to-ten.label' | translate }}
@@ -26,5 +26,10 @@
         }
       </div>
     }
-  </section>
+  </span>
+
+  <!-- <section hlmCard class="flex-1 min-w-[200px] m-2 p-5 text-center">test1</section>
+  <section hlmCard class="flex-1 min-w-[200px] m-2 p-5 text-center">test2</section>
+  <section hlmCard class="flex-1 min-w-[200px] m-2 p-5 text-center">test3</section>
+  <section hlmCard class="flex-1 min-w-[200px] m-2 p-5 text-center">test4</section> -->
 </div>
