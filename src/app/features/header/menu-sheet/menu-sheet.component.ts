@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, viewChild } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { lucideChartBar, lucideMail, lucideMenu } from '@ng-icons/lucide';
+import { lucideChartBar, lucideMail, lucideMenu, lucideUsers } from '@ng-icons/lucide';
 import { TranslateModule } from '@ngx-translate/core';
 import { BrnSheetComponent, BrnSheetContentDirective, BrnSheetTriggerDirective } from '@spartan-ng/brain/sheet';
 import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
@@ -23,7 +23,7 @@ import { HlmSheetComponent, HlmSheetContentComponent, HlmSheetFooterComponent } 
     HlmIconDirective,
     NgIcon
   ],
-  providers: [provideIcons({ lucideMenu, lucideMail, lucideChartBar })],
+  providers: [provideIcons({ lucideMenu, lucideMail, lucideChartBar, lucideUsers })],
   templateUrl: './menu-sheet.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

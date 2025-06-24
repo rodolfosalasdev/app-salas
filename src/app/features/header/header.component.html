@@ -11,12 +11,7 @@
   </div>
   <div class="sheet flex-1 min-w-[240px] max-w-1/2 flex justify-end items-center pr-4">
     <form [formGroup]="form" class="flex w-full max-w-60 mr-4">
-      <brn-select
-        class="inline-block"
-        formControlName="Language"
-        (valueChange)="onLanguageChange($event)"
-        placeholder="{{ 'header.select-language' | translate }}"
-      >
+      <brn-select class="inline-block" formControlName="language" (valueChange)="onLanguageChange($event)">
         <hlm-select-trigger class="w-56">
           <hlm-select-value
             >">
