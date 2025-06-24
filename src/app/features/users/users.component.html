@@ -1,12 +1,12 @@
 <div hlmCard class="m-2 p-4 min-w-[34vh]">
-  <h2 class="font-bold">Create User</h2>
+  <h2 class="font-bold">{{ 'users.title' | translate }}</h2>
 
   <div class="flex flex-wrap">
     <form class="flex flex-wrap gap-2 mt-4" [formGroup]="usersForm" (ngSubmit)="submitForm()">
       <input
         hlmInput
         class="flex-1 min-w-[30vh]"
-        placeholder="Name"
+        placeholder="{{ 'users.fields.name' | translate }}"
         type="text"
         maxlength="15"
         formControlName="name"
@@ -14,7 +14,7 @@
       <input
         hlmInput
         class="flex-1 min-w-[30vh]"
-        placeholder="Email"
+        placeholder="{{ 'users.fields.email' | translate }}"
         type="email"
         maxlength="30"
         formControlName="email"
@@ -25,19 +25,21 @@
           <hlm-select-value
             >">
             <div class="flex items-center gap-x-2" *brnSelectValue="let value">
-              {{ value.label }}
+              {{ value.label | translate }}
             </div>
           </hlm-select-value>
         </hlm-select-trigger>
         <hlm-select-content>
           @for (option of options; track option) {
             <hlm-option [value]="option">
-              {{ option.label }}
+              {{ option.label | translate }}
             </hlm-option>
           }
         </hlm-select-content>
       </brn-select>
-      <button type="submit" hlmBtn class="flex-1 min-w-[20vh]" [disabled]="isDisabledSignal()">Submit</button>
+      <button type="submit" hlmBtn class="flex-1 min-w-[20vh]" [disabled]="isDisabledSignal()">
+        {{ 'users.add-btn' | translate }}
+      </button>
     </form>
   </div>
 </div>

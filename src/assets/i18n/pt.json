@@ -24,5 +24,18 @@
     "clear-btn": "limpar",
     "add-btn": "adicionar",
     "placeholder": "item"
+  },
+  "users": {
+    "title": "Criar Usuário",
+    "add-btn": "adicionar",
+    "fields": {
+      "name": "Nome",
+      "email": "E-mail",
+      "role-options": {
+        "developer": "Desenvolvedor",
+        "techLead": "Líder Técnico",
+        "manager": "Gerente"
+      }
+    }
   }
 }

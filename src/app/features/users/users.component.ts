@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, effect, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@spartan-ng/brain/forms';
 import { TranslateModule } from '@ngx-translate/core';
@@ -35,9 +35,9 @@ export class UsersComponent {
   }
 
   public readonly options = [
-    { label: 'Developer', value: '1' },
-    { label: 'Tech Lead', value: '2' },
-    { label: 'Manager', value: '3' }
+    { label: 'users.fields.role-options.developer', value: 'developer' },
+    { label: 'users.fields.role-options.techLead', value: 'techLead' },
+    { label: 'users.fields.role-options.manager', value: 'manager' }
   ];
 
   protected usersForm = this.formBuilder.group({
