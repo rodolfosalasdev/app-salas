@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { lucideCross, lucideInstagram, lucideLinkedin } from '@ng-icons/lucide';
+import { lucideCross, lucideInstagram, lucideLinkedin, lucideGithub } from '@ng-icons/lucide';
 import { TranslateModule } from '@ngx-translate/core';
 import { BrnPopoverComponent, BrnPopoverContentDirective, BrnPopoverTriggerDirective } from '@spartan-ng/brain/popover';
 import { BrnSeparatorComponent } from '@spartan-ng/brain/separator';
@@ -13,7 +13,6 @@ import {
   HlmSheetComponent,
   HlmSheetContentComponent,
   HlmSheetDescriptionDirective,
-  HlmSheetFooterComponent,
   HlmSheetHeaderComponent,
   HlmSheetTitleDirective
 } from '@spartan-ng/ui-sheet-helm';
@@ -27,7 +26,6 @@ import {
     HlmSheetComponent,
     HlmSheetContentComponent,
     HlmSheetHeaderComponent,
-    HlmSheetFooterComponent,
     HlmSheetTitleDirective,
     HlmSheetDescriptionDirective,
     HlmAvatarImageDirective,
@@ -42,14 +40,15 @@ import {
     HlmIconDirective,
     NgIcon
   ],
-  providers: [provideIcons({ lucideCross, lucideInstagram, lucideLinkedin })],
+  providers: [provideIcons({ lucideCross, lucideInstagram, lucideLinkedin, lucideGithub })],
   templateUrl: './profile-sheet.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProfileSheetComponent {
   public socialMedia = {
     instagram: 'https://www.instagram.com/rodolfosalas.dev/',
-    linkedIn: 'https://www.linkedin.com/in/rodolfo-salas-21858911b/'
+    linkedIn: 'https://www.linkedin.com/in/rodolfo-salas-21858911b/',
+    github: 'https://github.com/rodolfosalasdev/app-salas'
   };
 
   public redirectTo(media: string): void {

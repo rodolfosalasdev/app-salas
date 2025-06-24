@@ -25,6 +25,13 @@
             <ng-icon hlm size="sm" class="mr-2" name="lucideInstagram" />
             <button (click)="redirectTo(socialMedia.instagram)" id="edit-profile" variant="ghost">Instagram</button>
           </span>
+
+          <brn-separator hlmSeparator />
+
+          <span class="flex items-center">
+            <ng-icon hlm size="sm" class="mr-2" name="lucideGithub" />
+            <button (click)="redirectTo(socialMedia.github)" id="edit-profile" variant="ghost">Github</button>
+          </span>
         </div>
       </brn-popover>
       <div class="p-6 max-w-lg mx-auto space-y-6 text-justify">
@@ -36,8 +43,5 @@
         <p hlmSheetDescription>{{ 'header.profile-sheet.about-me.paragraph-5' | translate }}</p>
       </div>
     </hlm-sheet-header>
-    <hlm-sheet-footer>
-      <!-- <button hlmBtn type="submit">Save Changes</button> -->
-    </hlm-sheet-footer>
   </hlm-sheet-content>
 </hlm-sheet>
