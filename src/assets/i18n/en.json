@@ -24,5 +24,18 @@
     "clear-btn": "clear",
     "add-btn": "add",
     "placeholder": "Item"
+  },
+  "users": {
+    "title": "Create User",
+    "add-btn": "add",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "role-options": {
+        "developer": "Developer",
+        "techLead": "Tech Lead",
+        "manager": "Manager"
+      }
+    }
   }
 }
