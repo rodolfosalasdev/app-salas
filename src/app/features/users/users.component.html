@@ -1,1 +1,43 @@
-users-component
+<div hlmCard class="m-2 p-4 min-w-[34vh]">
+  <h2 class="font-bold">Create User</h2>
+
+  <div class="flex flex-wrap">
+    <form class="flex flex-wrap gap-2 mt-4" [formGroup]="usersForm" (ngSubmit)="submitForm()">
+      <input
+        hlmInput
+        class="flex-1 min-w-[30vh]"
+        placeholder="Name"
+        type="text"
+        maxlength="15"
+        formControlName="name"
+      />
+      <input
+        hlmInput
+        class="flex-1 min-w-[30vh]"
+        placeholder="Email"
+        type="email"
+        maxlength="30"
+        formControlName="email"
+      />
+
+      <brn-select formControlName="role">
+        <hlm-select-trigger class="flex-1 min-w-[30vh]">
+          <hlm-select-value
+            >">
+            <div class="flex items-center gap-x-2" *brnSelectValue="let value">
+              {{ value.label }}
+            </div>
+          </hlm-select-value>
+        </hlm-select-trigger>
+        <hlm-select-content>
+          @for (option of options; track option) {
+            <hlm-option [value]="option">
+              {{ option.label }}
+            </hlm-option>
+          }
+        </hlm-select-content>
+      </brn-select>
+      <button type="submit" hlmBtn class="flex-1 min-w-[20vh]" [disabled]="isDisabledSignal()">Submit</button>
+    </form>
+  </div>
+</div>

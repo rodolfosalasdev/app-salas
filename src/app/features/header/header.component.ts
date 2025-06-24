@@ -36,7 +36,7 @@ export class HeaderComponent {
   ];
 
   protected form = this.formBuilder.group({
-    Language: this.options[0]
+    language: this.options[0]
   });
 
   onLanguageChange(selectedOption: any) {
