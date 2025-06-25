@@ -1,12 +1,12 @@
 <div hlmCard class="m-2 p-4 min-w-[34vh]">
-  <h2 class="font-bold">{{ 'users.title' | translate }}</h2>
+  <h2 class="font-bold">{{ 'user-create.title' | translate }}</h2>
 
   <div class="flex flex-wrap">
     <form class="flex flex-wrap gap-2 mt-4" [formGroup]="usersForm" (ngSubmit)="submitForm()">
       <input
         hlmInput
         class="flex-1 min-w-[30vh]"
-        placeholder="{{ 'users.fields.name' | translate }}"
+        placeholder="{{ 'user-create.fields.name' | translate }}"
         type="text"
         maxlength="15"
         formControlName="name"
@@ -14,7 +14,7 @@
       <input
         hlmInput
         class="flex-1 min-w-[30vh]"
-        placeholder="{{ 'users.fields.email' | translate }}"
+        placeholder="{{ 'user-create.fields.email' | translate }}"
         type="email"
         maxlength="30"
         formControlName="email"
@@ -38,8 +38,9 @@
         </hlm-select-content>
       </brn-select>
       <button type="submit" hlmBtn class="flex-1 min-w-[20vh]" [disabled]="isDisabledSignal()">
-        {{ 'users.add-btn' | translate }}
+        {{ 'user-create.add-btn' | translate }}
       </button>
     </form>
   </div>
 </div>
+<app-user-table></app-user-table>

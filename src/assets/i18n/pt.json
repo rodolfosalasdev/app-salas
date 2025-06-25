@@ -25,7 +25,7 @@
     "add-btn": "adicionar",
     "placeholder": "item"
   },
-  "users": {
+  "user-create": {
     "title": "Criar Usuário",
     "add-btn": "adicionar",
     "fields": {
@@ -37,5 +37,11 @@
         "manager": "Gerente"
       }
     }
+  },
+  "user-list": {
+    "title": "Usuários",
+    "name": "Nome",
+    "email": "E-mail",
+    "role": "Função"
   }
 }
