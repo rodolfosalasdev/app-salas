@@ -25,7 +25,7 @@
     "add-btn": "add",
     "placeholder": "Item"
   },
-  "users": {
+  "user-create": {
     "title": "Create User",
     "add-btn": "add",
     "fields": {
@@ -37,5 +37,11 @@
         "manager": "Manager"
       }
     }
+  },
+  "user-list": {
+    "title": "Users",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role"
   }
 }

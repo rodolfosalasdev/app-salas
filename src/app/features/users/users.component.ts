@@ -7,6 +7,9 @@ import { HlmInputDirective } from '@spartan-ng/ui-input-helm';
 import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
 import { BrnSelectImports } from '@spartan-ng/brain/select';
 import { HlmSelectImports } from '@spartan-ng/ui-select-helm';
+import { UserTableComponent } from './user-table/user-table.component';
+import { UserService } from './service/user.service';
+import { Users } from './interfaces/user.interface';
 
 @Component({
   selector: 'app-users',
@@ -18,7 +21,8 @@ import { HlmSelectImports } from '@spartan-ng/ui-select-helm';
     HlmInputDirective,
     HlmButtonDirective,
     BrnSelectImports,
-    HlmSelectImports
+    HlmSelectImports,
+    UserTableComponent
   ],
   providers: [{ provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }],
   templateUrl: './users.component.html',
@@ -26,6 +30,7 @@ import { HlmSelectImports } from '@spartan-ng/ui-select-helm';
 })
 export class UsersComponent {
   private readonly formBuilder = inject(FormBuilder);
+  private readonly userService = inject(UserService);
   public readonly isDisabledSignal = signal(true);
 
   constructor() {
@@ -35,9 +40,9 @@ export class UsersComponent {
   }
 
   public readonly options = [
-    { label: 'users.fields.role-options.developer', value: 'developer' },
-    { label: 'users.fields.role-options.techLead', value: 'techLead' },
-    { label: 'users.fields.role-options.manager', value: 'manager' }
+    { label: 'user-create.fields.role-options.developer', value: 'developer' },
+    { label: 'user-create.fields.role-options.techLead', value: 'techLead' },
+    { label: 'user-create.fields.role-options.manager', value: 'manager' }
   ];
 
   protected usersForm = this.formBuilder.group({
@@ -48,7 +53,13 @@ export class UsersComponent {
 
   public submitForm(): void {
     if (this.usersForm.valid) {
-      console.log(this.usersForm.value);
+      const { name, email, role } = this.usersForm.value;
+      const userToSend: Users = {
+        name: name || '',
+        email: email || '',
+        role: role?.value || ''
+      };
+      this.userService.addUser(userToSend).subscribe();
     }
     this.resetForm();
   }
