@@ -10,6 +10,10 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+package-lock.json
+package-lock 2.json
+tsconfig.app 2.json
+eslint.config 2.js
 
 # IDEs and editors
 .idea/
