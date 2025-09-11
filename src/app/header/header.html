@@ -1,0 +1,15 @@
+<div class="flex justify-center mt-6">
+  <mat-card appearance="outlined" class="w-[96%] h-12 justify-center items-center">
+    <div class="flex w-[70%] justify-around">
+      @for (item of title(); track $index) {
+        <button matButton>{{ item | titlecase }}</button>
+      }
+      <button matButton [matMenuTriggerFor]="menu">Tradução</button>
+    </div>
+  </mat-card>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Ingles</button>
+  <button mat-menu-item>Espanhol</button>
+</mat-menu>
